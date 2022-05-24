@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+:root {
+  --bs-blue: #0d6efd;
+  --bs-indigo: #6610f2;
+  --bs-purple: #6f42c1;
+  --bs-pink: #d63384;
+  --bs-red: #dc3545;
+  --bs-orange: #fd7e14;
+  --bs-yellow: #ffc107;
+  --bs-green: #198754;
+  --bs-teal: #20c997;
+  --bs-cyan: #0dcaf0;
+  --bs-black: #000;
+  --bs-white: #fff;
+  --bs-gray: #6c757d;
+  --bs-gray-dark: #343a40;
+  --bs-gray-100: #f8f9fa;
+  --bs-gray-200: #e9ecef;
+  --bs-gray-300: #dee2e6;
+  --bs-gray-400: #ced4da;
+  --bs-gray-500: #adb5bd;
+  --bs-gray-600: #6c757d;
+  --bs-gray-700: #495057;
+  --bs-gray-800: #343a40;
+  --bs-gray-900: #212529;
+  --bs-primary: #0d6efd;
+  --bs-secondary: #6c757d;
+  --bs-success: #198754;
+  --bs-info: #0dcaf0;
+  --bs-warning: #ffc107;
+  --bs-danger: #dc3545;
+  --bs-light: #f8f9fa;
+  --bs-dark: #212529;
+  --bs-primary-rgb: 13, 110, 253;
+  --bs-secondary-rgb: 108, 117, 125;
+  --bs-success-rgb: 25, 135, 84;
+  --bs-info-rgb: 13, 202, 240;
+  --bs-warning-rgb: 255, 193, 7;
+  --bs-danger-rgb: 220, 53, 69;
+  --bs-light-rgb: 248, 249, 250;
+  --bs-dark-rgb: 33, 37, 41;
+  --bs-white-rgb: 255, 255, 255;
+  --bs-black-rgb: 0, 0, 0;
+  --bs-body-color-rgb: 33, 37, 41;
+  --bs-body-bg-rgb: 255, 255, 255;
+  --bs-font-sans-serif: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+  --bs-body-font-family: var(--bs-font-sans-serif);
+  --bs-body-font-size: 1rem;
+  --bs-body-font-weight: 400;
+  --bs-body-line-height: 1.5;
+  --bs-body-color: #212529;
+  --bs-body-bg: #fff;
+  --bs-border-width: 1px;
+  --bs-border-style: solid;
+  --bs-border-color: #dee2e6;
+  --bs-border-color-translucent: rgba(0, 0, 0, 0.175);
+  --bs-border-radius: 0.375rem;
+  --bs-border-radius-sm: 0.25rem;
+  --bs-border-radius-lg: 0.5rem;
+  --bs-border-radius-xl: 1rem;
+  --bs-border-radius-2xl: 2rem;
+  --bs-border-radius-pill: 50rem;
+  --bs-heading-color: ;
+  --bs-link-color: #0d6efd;
+  --bs-link-hover-color: #0a58ca;
+  --bs-code-color: #d63384;
+  --bs-highlight-bg: #fff3cd;
+  /* Font */
+  --mainfont: 'Montserrat', sans-serif;
+}
+
+::selection {
+  background-color: var(--bs-cyan);
+  color: var(--bs-gray-dark);
+}
+
+/* Navbar */
+nav {
+  background: var(--bs-gray-900);
+  font-family: var(--mainfont);
+}
+@media (min-width: 768px) {
+  nav .navbar-nav .nav-item {
+    position: relative;
+  }
+  nav .navbar-nav .nav-item::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 0%;
+    left: 10px;
+    bottom: 0;
+    background: var(--bs-pink);
+    border-radius: 20px;
+    transition: all 0.4s;
+  }
+  nav .navbar-nav .nav-item:hover::after {
+    width: 30%;
+  }
+  nav .navbar-nav .active::after {
+    width: 30%;
+  }
+}
+/* Navbar End */
+
+/* Hamburger Menu */
+.navbar-toggler {
+  border: 0;
+}
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  border: 0;
+  box-shadow: none;
+  outline: none;
+}
+.toggler-icon {
+  height: 2px;
+  width: 25px;
+  display: block;
+  background-color: var(--bs-pink);
+  transition: all 0.4s;
+}
+
+.middle-bar {
+  margin: 5px auto;
+}
+
+.navbar-toggler .top-bar {
+  transform: rotate(45deg);
+  transform-origin: 10% 10%;
+}
+.navbar-toggler .middle-bar {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.navbar-toggler .bottom-bar {
+  transform: rotate(-45deg);
+  transform-origin: 10% 10%;
+}
+
+.navbar-toggler.collapsed .top-bar {
+  transform: rotate(0);
+}
+.navbar-toggler.collapsed .middle-bar {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.navbar-toggler.collapsed .bottom-bar {
+  transform: rotate(0);
+}
+.navbar-toggler.collapsed .toggler-icon {
+  background-color: var(--bs-white);
+}
+/* Hamburger Menu End */
+
+/* Hero */
+#hero {
+  background-color: var(--bs-gray-900);
+  height: 100vh;
+}
+
+.social-icon {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 40%;
+  left: 0;
+}
+
+.jumbotron {
+  position: absolute;
+  left: 20%;
+  padding-top: 10rem;
+  font-family: var(--mainfont);
+}
+.jumbotron h1 {
+  color: var(--bs-gray-500);
+}
+
+.jumbotron .view-work {
+  background-color: var(--bs-pink);
+}
+@media (min-width: 992px) {
+  .jumbotron {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+/* Hero End */
+
+/* About */
+#about {
+  background-color: var(--bs-gray-900);
+  padding-top: 8rem;
+}
+
+.title-page {
+  padding-left: 20px;
+  position: relative;
+}
+.title-page .ruler {
+  display: flex;
+  align-items: center;
+  width: 30px;
+  position: absolute;
+  height: 4px;
+  background: var(--bs-pink);
+  border-radius: 20px;
+}
+@media (min-width: 768px) {
+  .title-page {
+    padding-left: 20%;
+    position: relative;
+  }
+  .heading-1 {
+    text-align: end;
+  }
+}
+/* About End */
+
+/* Skills */
+#skills {
+  background-color: var(--bs-gray-900);
+  padding-top: 8rem;
+}
+/* Skills End */
+
+/* Work */
+#work {
+  background-color: var(--bs-gray-900);
+  padding-top: 8rem;
+  border: 1px solid;
+}
+.work .title-work {
+  color: var(--bs-cyan);
+  font-family: var(--mainfont);
+}
+.view-work {
+  background-color: var(--bs-cyan);
+}
+/* Work End */
+
+/* Contact */
+#contact {
+  background-color: var(--bs-gray-900);
+  padding-top: 8rem;
+}
+.form-control {
+  background: var(--bs-gray-400);
+}
+.form-control:focus {
+  background: var(--bs-gray-700);
+}
+.contact .btn-send {
+  background-color: var(--bs-pink);
+  color: #fff;
+}
+.footer p {
+  font-family: var(--mainfont);
+  font-size: 14px;
+}
+/* Contact End */
+
+/* ToTop */
+.to-top {
+  position: fixed;
+  font-size: 35px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  bottom: 10px;
+  right: 10px;
+  height: 50px;
+  width: 50px;
+  color: var(--bs-success);
+  transform: rotate(-45deg);
+  z-index: 9999;
+  border-radius: 40px;
+}
+/* ToTop End */
